@@ -15,6 +15,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
         body {
             font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
             background-color: #F8F9F8; /* Light Green Page Background */
@@ -79,7 +82,7 @@
         }
         .icon-purpose::before { content: "🎯"; }
         .icon-literacy::before { content: "💡"; }
-        .icon-calendar::before { content: "📅"; }
+        .icon-calendar::before { content: "�"; }
         .icon-users::before { content: "👥"; }
         .icon-methods::before { content: "📝"; }
         .icon-stats::before { content: "📊"; }
@@ -100,9 +103,6 @@
             position: absolute;
             left: 0;
             font-weight: bold;
-        }
-        .custom-shadow {
-             box-shadow: 4px 4px 16px rgba(56, 142, 60, 0.2);
         }
 
         /* Initial Page Load & Scroll Intro Animation */
@@ -125,7 +125,7 @@
 
         main, footer {
             opacity: 0;
-            transition: opacity 0.5s ease-in-out;
+            transition: opacity 0.8s ease-in-out;
         }
         
         body.scrolled main, body.scrolled footer {
@@ -135,7 +135,7 @@
         .scroll-animate {
             opacity: 0;
             transform: translateY(40px);
-            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
         }
 
         .scroll-animate.is-visible {
@@ -252,7 +252,7 @@
                 <div class="grid md:grid-cols-2 gap-6">
                     <div class="info-card">
                         <h4 class="font-semibold text-lg text-[#66BB6A] mb-2">김희성 학생</h4>
-                        <img src="src/his.jpg" alt="김희성 학생 인터뷰 이미지" class="w-full h-48 md:h-56 object-cover rounded-md mb-4 shadow-md">
+                        <img src="src/his.jpg" alt="김희성 학생 인터뷰 이미지" class="w-full h-56 md:h-64 object-cover rounded-md mb-4 shadow-md">
                         <ul class="list-disc list-inside space-y-1 text-sm">
                             <li>만족스러운 답변까지 평균 <span class="highlight-text">약 10분</span> 소요.</li>
                             <li>가장 오래 걸린 경우: 역사 수행평가 주제 구성 시 <span class="highlight-text">약 20분 이상</span> 소요, 결과는 매우 만족.</li>
@@ -262,7 +262,7 @@
                     </div>
                     <div class="info-card">
                         <h4 class="font-semibold text-lg text-[#66BB6A] mb-2">박주혁 학생</h4>
-                        <img src="src/ju.jpg" alt="박주혁 학생 인터뷰 이미지" class="w-full h-48 md:h-56 object-cover rounded-md mb-4 shadow-md">
+                        <img src="src/ju.jpg" alt="박주혁 학생 인터뷰 이미지" class="w-full h-56 md:h-64 object-cover rounded-md mb-4 shadow-md">
                         <ul class="list-disc list-inside space-y-1 text-sm">
                             <li>초보자 조언: "프롬프트를 <span class="highlight-text">최대한 상세하고 구체적으로</span> 작성하는 것이 중요!"</li>
                             <li>사례: '성공적인 직업생활' 수업 중 로고 제작 요청 시, 상세 설명(스타일, 컬러, 용도 등) 포함 → 모던하고 깔끔한 결과물에 만족.</li>
@@ -273,13 +273,13 @@
                 
                 <div class="info-card mt-6">
                     <h3 class="subsection-title text-center">인터뷰 핵심 키워드: 워드클라우드</h3>
-                    <img src="src/word.png" alt="김희성, 박주혁 학생 인터뷰 핵심 키워드 워드클라우드" class="w-full max-w-3xl mx-auto mt-4 rounded-lg custom-shadow">
+                    <img src="src/word.png" alt="김희성, 박주혁 학생 인터뷰 핵심 키워드 워드클라우드" class="w-full max-w-3xl mx-auto mt-4 rounded-lg">
                 </div>
 
                  <div class="info-card mt-6">
                     <h4 class="font-semibold text-lg text-[#66BB6A] mb-2">학생들의 공통된 경험 및 인식</h4>
-                     <p class="text-sm mb-2">"처음엔 그냥 막연하게 물었더니 엉뚱한 답이 나와서, 두세 번 질문을 바꿔 써야 했다." (한 학생)</p>
-                     <p class="text-sm">"AI야, 환경 문제 알려줘"라는 질문을 <span class="highlight-text">"기후 변화로 인한 해수면 상승 원인을 중학생도 이해할 수 있게 설명해줘"</span>로 바꾼 뒤에야 원하는 답을 얻을 수 있었다. (한 학생)</p>
+                     <p class="text-sm mb-2">"처음엔 그냥 막연하게 물었더니 엉뚱한 답이 나와서, 두세 번 질문을 바꿔 써야 했다." (박주혁 학생)</p>
+                     <p class="text-sm">"AI야, 환경 문제 알려줘"라는 질문을 <span class="highlight-text">"기후 변화로 인한 해수면 상승 원인을 중학생도 이해할 수 있게 설명해줘"</span>로 바꾼 뒤에야 원하는 답을 얻을 수 있었다. (박주혁 학생)</p>
                 </div>
             </section>
 
@@ -326,7 +326,9 @@
             <section class="mb-12 scroll-animate">
                 <h2 class="section-title">7. 참고 자료</h2>
                 <div class="info-card text-center">
-                    <p class="text-base icon icon-reference">Chat GPT, Gemini, Perplexity</p>
+                    <p class="text-base icon icon-reference">
+                        Chat GPT, Gemini, Perplexity, 2025 공통국어 교과서, 클로바노트, 구글 Forms
+                    </p>
                 </div>
             </section>
         </main>
@@ -379,12 +381,13 @@
             Chart.defaults.plugins.tooltip.displayColors = true;
             Chart.defaults.plugins.tooltip.boxPadding = 3;
 
-            // Chart Data
+            // Chart Data with Counts
             const survey1Data = {
                 labels: ['보통이다', '중요하다', '매우 중요하다'],
                 datasets: [{
                     label: '응답 비율 (%)',
                     data: [5.6, 61.1, 33.3],
+                    counts: [1, 11, 6],
                     backgroundColor: ['#E0E0E0', '#A5D6A7', '#388E3C'],
                     hoverBackgroundColor: ['#BDBDBD', '#81C784', '#2E7D32'],
                     borderColor: '#FFFFFF',
@@ -403,6 +406,7 @@
                 datasets: [{
                     label: '응답 비율 (%)',
                     data: [5.6, 77.8, 11.1, 0, 5.6],
+                    counts: [1, 14, 2, 0, 1],
                     backgroundColor: ['#E8F5E9', '#388E3C', '#A5D6A7', '#E0E0E0', '#EEEEEE'],
                     hoverBackgroundColor: ['#C8E6C9', '#2E7D32', '#81C784', '#BDBDBD', '#E0E0E0'],
                     borderColor: '#FFFFFF',
@@ -416,6 +420,7 @@
                 datasets: [{
                     label: '응답 비율 (%)',
                     data: [22.2, 50, 27.8],
+                    counts: [4, 9, 5],
                     backgroundColor: ['#E0E0E0', '#A5D6A7', '#388E3C'],
                     hoverBackgroundColor: ['#BDBDBD', '#81C784', '#2E7D32'],
                     borderColor: '#FFFFFF',
@@ -427,19 +432,19 @@
             const ctx1 = document.getElementById('survey1Chart');
             if (ctx1) {
                 new Chart(ctx1.getContext('2d'), {
-                    type: 'doughnut', data: survey1Data, options: { responsive: true, maintainAspectRatio: false, plugins: { title: { display: false }, tooltip: { callbacks: { label: function(context) { let label = context.label || ''; if (label) { label += ': '; } if (context.parsed !== null) { label += context.parsed.toFixed(1) + '%'; } return label; } } } }, cutout: '60%' }
+                    type: 'doughnut', data: survey1Data, options: { responsive: true, maintainAspectRatio: false, plugins: { title: { display: false }, tooltip: { callbacks: { label: function(context) { let label = context.label || ''; let count = context.dataset.counts[context.dataIndex]; if (label) { label += ': '; } if (context.parsed !== null) { label += `${context.parsed.toFixed(1)}% (${count}명)`; } return label; } } } }, cutout: '60%' }
                 });
             }
             const ctx2 = document.getElementById('survey2Chart');
             if (ctx2) {
                 new Chart(ctx2.getContext('2d'), {
-                    type: 'bar', data: survey2Data, options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false, scales: { x: { beginAtZero: true, title: { display: true, text: '응답 비율 (%)', font: {size: 12}}, grid: { display: true, color: '#E8F5E9' } }, y: { grid: { display: false }, ticks: { font: {size: 11}, callback: function(value) { const label = this.getLabelForValue(value); return formatLabel(label, 25); } } } }, plugins: { title: { display: false }, legend: { display: false }, tooltip: { mode: 'y', intersect: false, callbacks: { title: function(tooltipItems) { const dataIndex = tooltipItems[0].dataIndex; return survey2Data.labels[dataIndex]; }, label: function(context) { let label = context.dataset.label || ''; if (label) { label += ': '; } if (context.parsed.x !== null) { label += context.parsed.x.toFixed(1) + '%'; } return label; } } } }, layout: { padding: { left: 10, right: 10, top: 0, bottom: 10 } } }
+                    type: 'bar', data: survey2Data, options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false, scales: { x: { beginAtZero: true, title: { display: true, text: '응답 비율 (%)', font: {size: 12}}, grid: { display: true, color: '#E8F5E9' } }, y: { grid: { display: false }, ticks: { font: {size: 11}, callback: function(value) { const label = this.getLabelForValue(value); return formatLabel(label, 25); } } } }, plugins: { title: { display: false }, legend: { display: false }, tooltip: { mode: 'y', intersect: false, callbacks: { title: function(tooltipItems) { const dataIndex = tooltipItems[0].dataIndex; return survey2Data.labels[dataIndex]; }, label: function(context) { let label = context.dataset.label || ''; let count = context.dataset.counts[context.dataIndex]; if (label) { label += ': '; } if (context.parsed.x !== null) { label += `${context.parsed.x.toFixed(1)}% (${count}명)`; } return label; } } } }, layout: { padding: { left: 10, right: 10, top: 0, bottom: 10 } } }
                 });
             }
             const ctx3 = document.getElementById('survey3Chart');
             if (ctx3) {
                 new Chart(ctx3.getContext('2d'), {
-                    type: 'pie', data: survey3Data, options: { responsive: true, maintainAspectRatio: false, plugins: { title: { display: false }, tooltip: { callbacks: { label: function(context) { let label = context.label || ''; if (label) { label += ': '; } if (context.parsed !== null) { label += context.parsed.toFixed(1) + '%'; } return label; } } } } }
+                    type: 'pie', data: survey3Data, options: { responsive: true, maintainAspectRatio: false, plugins: { title: { display: false }, tooltip: { callbacks: { label: function(context) { let label = context.label || ''; let count = context.dataset.counts[context.dataIndex]; if (label) { label += ': '; } if (context.parsed !== null) { label += `${context.parsed.toFixed(1)}% (${count}명)`; } return label; } } } } }
                 });
             }
 
